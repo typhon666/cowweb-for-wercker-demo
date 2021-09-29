@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cowweb
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-internal: "true"
+    service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.ap-tokyo-1.aaaaaaaaqqdp4buygjinboku5sve4qj5ie7nr2u2xtb4ss3b4hlyyvoywqtq"
 spec:
   ports:
   - name: http
